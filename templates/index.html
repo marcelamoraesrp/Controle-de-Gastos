@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="stylesheet" href="../static/css/index.css" />
+        <link rel="stylesheet" href="../static/css/global.css" />
+        <script src="../static/js/index.js" defer></script>
+        <script src="../static/js/validation.js" defer></script>
+    </head>
+    <body>
+        <form>
+            <div>
+                <div><label for="email">Email</label></div>
+                <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com" />
+                <div class="error" id="email-required-error">
+                    Email é obrigatório
+                </div>
+                <div class="error" id="email-invalid-error">
+                    Email é inválido
+                </div>
+            </div>
+            <div>
+                <div><label for="password">Senha</label></div>
+                <input type="password" name="password" id="password" onchange="onChangePassaword()" placeholder="sua senha" />
+                <div class="error" id="password-required-error">
+                    Senha é obrigatória
+                </div>
+            </div>
+
+            <div>
+                <button type="button" class="clear" id="recover-password-button">
+                    Recuperar senha
+                </button>
+            </div>
+
+            <div>
+                <button type="button" class="solid" id="login-button" onclick="login()">
+                    Entrar
+                </button>
+            </div>
+
+            <div>
+                <button type="button" class="outline" onclick="register()">
+                    Registrar
+                </button>
+            </div>
+        </form>
+    </body>
+</html>
